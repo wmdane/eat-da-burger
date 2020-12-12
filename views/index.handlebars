@@ -1,11 +1,34 @@
-<h1>Eat Da Burger!</h1>
+<h1 class="text-center">Eat Da Burger!</h1>
 
-<h2>What Kind of Burger Do You Want?</h2>
+<h2 class="text-center">What Kind of Burger Do You Want?</h2>
+<div class="text-center">
+    <img class="mx-auto img-fluid" style="height: 630px; width:auto"
+        src="https://i.pinimg.com/originals/6a/27/ac/6a27ac5560df47ec8bb998051b74b1f0.png">
+</div>
 
-<ul>
-    {{#each burger}}
-    {{#unless this.devoured}}
-    <li>{{this.id}}. {{this.burger}}</li>
-    {{/unless}}
-    {{/each}}
-</ul>
+<div class="row">
+    <div class="col-6">
+        <h3><strong>Tasty Burgers!</strong></h3>
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li><strong> {{this.id}}. {{this.burger_name}}</strong></li>
+            <button class="isDevoured btn btn-warning" data-id="{{id}}">
+                EAT IT!
+            </button>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="col-6">
+        <h3><strong>Devoured Burgers</strong></h3>
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <li><strong> {{this.id}}. {{this.burger_name}}</strong></li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
