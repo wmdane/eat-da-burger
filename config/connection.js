@@ -1,5 +1,6 @@
 var mysql = require("mysql");
 
+//connection code borrowed from cats activity
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
