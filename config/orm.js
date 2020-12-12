@@ -71,7 +71,7 @@ var orm = {
     //console log to make sure query string displays correctly
     console.log(queryString);
 
-    connection.query(queryString, value, function (err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }

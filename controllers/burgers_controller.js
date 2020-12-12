@@ -29,7 +29,7 @@ router.get("/", function (req, res) {
 
     console.log("condition", condition);
 
-    burger.update(
+    burger.updateOne(
       {
         devoured: req.body.devoured,
       },

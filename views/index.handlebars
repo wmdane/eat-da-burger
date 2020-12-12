@@ -13,7 +13,7 @@
             {{#each burgers}}
             {{#unless devoured}}
             <li><strong> {{this.id}}. {{this.burger_name}}</strong></li>
-            <button class="isDevoured btn btn-warning" data-id="{{id}}">
+            <button class="devourburger btn btn-warning" data-id="{{this.id}}">
                 EAT IT!
             </button>
             {{/unless}}
@@ -30,5 +30,18 @@
             {{/if}}
             {{/each}}
         </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 text-center">
+        <h3>Add a Burger</h3>
+        <form class="create-form">
+            <div class="form-group">
+                <label for="add">Burger</label>
+                <input type="text" id="add" name="burger">
+            </div>
+            <button type="submit" class="btn btn-success">Add</button>
+        </form>
     </div>
 </div>
